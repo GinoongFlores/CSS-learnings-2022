@@ -1,0 +1,168 @@
+body {
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+
+	display: flex;
+	flex-direction: column;
+}
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+}
+
+.main {
+	background: lightgreen;
+	border: 5px solid green;
+	padding: 16px;
+	margin: 16px;
+	margin-bottom: 0;
+	min-height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+/* flex containers */
+
+.first-container,
+.third-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	gap: 8px;
+}
+
+.first-container,
+.third-container {
+	background: lightblue;
+	border: 2px solid blue;
+	/* width: 600px;
+	height: 200px; */
+}
+
+/* First container */
+
+.first-container .b1,
+.first-container .b2,
+.first-container .b3 {
+	height: 100px;
+	width: 400px;
+	background: palegoldenrod;
+	border: 4px solid peachpuff;
+	margin: 16px 0;
+}
+
+.first-container .b2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 0 8px;
+}
+
+.first-container .b2 .box {
+	height: 50px;
+	width: 200px;
+	background: violet;
+	border: 4px solid red;
+}
+
+/* second container */
+
+.second-container {
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+
+	overflow-x: hidden;
+}
+
+.second-container .b1,
+.second-container .partner .box {
+	background: brown;
+	border: 4px solid magenta;
+}
+
+.second-container .b1 {
+	height: 500px;
+	width: 800px;
+}
+
+.second-container .partner {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+}
+
+.second-container .partner .box {
+	width: 600px;
+	height: 100px;
+	flex: auto;
+}
+
+/* third container */
+
+.third-container .b1,
+.third-container .b4 {
+	height: 100px;
+	width: 400px;
+	background: indigo;
+	border: 4px solid royalblue;
+}
+
+.third-container .b1,
+.third-container .b2,
+.third-container .b3,
+.third-container .b4 {
+	margin: 16px 0;
+}
+
+.third-container .b2,
+.third-container .b3 {
+	height: 100px;
+	width: 200px;
+	background: palegoldenrod;
+	border: 4px solid peachpuff;
+}
+
+.footer {
+	height: 72px;
+	background: #eee;
+	color: darkmagenta;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media (max-width: 720px) {
+	.second-container {
+		flex-wrap: wrap;
+		flex-shrink: 1;
+	}
+}
+
+@media (max-width: 500px) {
+	.first-container .b2 {
+		flex-direction: column;
+		gap: 8px;
+		padding: 0 8px;
+	}
+
+	.first-container .b1,
+	.first-container .b2,
+	.first-container .b3,
+	.third-container .b1,
+	.third-container .b4 {
+		margin: 16px;
+	}
+}
