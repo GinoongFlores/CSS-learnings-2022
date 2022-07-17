@@ -56,6 +56,8 @@ body {
 	background: palegoldenrod;
 	border: 4px solid peachpuff;
 	margin: 16px 0;
+
+	/* flex: 1; */
 }
 
 .first-container .b2 {
@@ -71,6 +73,8 @@ body {
 	width: 200px;
 	background: violet;
 	border: 4px solid red;
+
+	/* flex: auto; */
 }
 
 /* second container */
@@ -96,8 +100,7 @@ body {
 
 .second-container .partner {
 	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
+	flex-flow: column wrap-reverse;
 	align-items: center;
 	justify-content: center;
 	gap: 8px;
