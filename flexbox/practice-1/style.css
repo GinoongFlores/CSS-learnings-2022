@@ -100,7 +100,7 @@ body {
 
 .second-container .partner {
 	display: flex;
-	flex-flow: column wrap-reverse;
+	flex-flow: column wrap;
 	align-items: center;
 	justify-content: center;
 	gap: 8px;
